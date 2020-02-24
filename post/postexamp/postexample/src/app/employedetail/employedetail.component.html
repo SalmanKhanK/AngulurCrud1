@@ -1,0 +1,20 @@
+<p>employedetail works!</p>
+<form (submit)="onsubmit()">
+    <div>
+<label for="">title</label>
+<input type="text" name="title" [(ngModel)]="users.title">
+
+</div>
+<input type="submit" name="" id="" value="submit">
+</form>
+<ul>
+    <li *ngFor="let album of  albums">
+        {{album.title}}
+        <button  (click)=" deleteIusse(album.id)">Remove</button>
+        <button (click)=" updateData()">update</button>
+        <button (click)="goBack()">go back</button>
+    </li>
+</ul>
+<select >
+    <option *ngFor="let album of  albums">{{album.title}}</option>
+</select>
